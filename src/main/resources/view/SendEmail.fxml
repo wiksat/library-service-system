@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pl.edu.agh.controller.SendEmailController"
+            prefWidth="1000" prefHeight="600">
+    <top>
+        <VBox>
+            <Label id="titleLabel" text="Dodaj książkę" styleClass="label"/>
+            <Button id="backButton" text="Powrót" onAction="#handleBackClickAction" styleClass="button" />
+        </VBox>
+    </top>
+    <center>
+        <VBox id="centerVBox">
+            <VBox id="innerVBox">
+                <Label fx:id="newsLetterLabel" text="Napisz news letter" styleClass="label"/>
+                <Label text="Temat" styleClass="label"/>
+                <TextField fx:id="newsLetterSubject" styleClass="textField"/>
+                <Pane prefHeight="15"/>
+                <Label text="Treść" styleClass="label"/>
+                <TextArea fx:id="newsLetterContent" prefHeight="200" prefWidth="500" styleClass="textArea"/>
+                <Pane prefHeight="15"/>
+                <Button id="newsLetterButton" text="Wyślij news letter" onAction="#handleSendNewsLetterAction" styleClass="button"/>
+                <Pane prefHeight="45"/>
+
+                <Button id="wideButton" text="Wyślij przypomnienia o zwrocie książek" onAction="#handleSendEmailAction" styleClass="button"/>
+                <Pane prefHeight="15"/>
+                <Label fx:id="resultLabel" styleClass="label"/>
+            </VBox>
+        </VBox>
+    </center>
+    <stylesheets>
+        <URL value="@../styles/SendEmailStyles.css" />
+    </stylesheets>
+
+</BorderPane>

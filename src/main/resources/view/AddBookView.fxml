@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.image.ImageView?>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.40"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pl.edu.agh.controller.AddBookController"
+            prefWidth="1000" prefHeight="600">
+    <top>
+        <VBox>
+            <Label id="titleLabel" text="Dodaj książkę" styleClass="label"/>
+            <Button id="backButton" text="Powrót" onAction="#handleBackClickAction" styleClass="button" />
+        </VBox>
+    </top>
+    <center>
+        <VBox id="centerVBox">
+            <VBox id="innerVBox">
+                <Label text="Tytuł" styleClass="label"/>
+                <TextField fx:id="titleField" promptText="Wprowadź tytuł" styleClass="text-field"/>
+                <Pane prefHeight="15"/>
+                <Label text="Autor" styleClass="label"/>
+                <TextField fx:id="authorField" promptText="Wprowadź autora" styleClass="text-field"/>
+                <Pane prefHeight="15"/>
+                <Label text="Kategoria" styleClass="label"/>
+                <ChoiceBox fx:id="categoryChoiceBox" styleClass="choice-box"/>
+                <Pane prefHeight="15"/>
+                <Label text="Numer ISBN" styleClass="label"/>
+                <TextField fx:id="isbnField" promptText="Wprowadź numer ISBN" styleClass="text-field"/>
+                <Pane prefHeight="15"/>
+
+                <Label text="Liczba egzemplarzy" styleClass="label"/>
+                <Label text="Miękka oprawa" styleClass="label"/>
+                <TextField fx:id="softCoverQuantityField" promptText="Wprowadź liczbę egzemplarzy" styleClass="text-field"/>
+                <Label text="Twarda oprawa" styleClass="label"/>
+                <TextField fx:id="hardCoverQuantityField" promptText="Wprowadź liczbę egzemplarzy" styleClass="text-field"/>
+                <Pane prefHeight="15"/>
+
+                <Label text="Okładka" styleClass="label"/>
+                <Button id="wideButton" text="Przeglądaj..." onAction="#chooseImageFile" styleClass="button"/>
+                <Pane prefHeight="15"/>
+                <ImageView fx:id="imageView"/>
+                <Pane prefHeight="15"/>
+                <Label fx:id="resultLabel" styleClass="label"/>
+                <Button text="Dodaj" onAction="#handleAddBookAction" styleClass="button"/>
+            </VBox>
+        </VBox>
+    </center>
+    <stylesheets>
+        <URL value="@../styles/AddBookStyles.css" />
+    </stylesheets>
+</BorderPane>

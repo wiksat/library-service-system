@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.Pane?>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.40"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pl.edu.agh.controller.AddUserController"
+            prefWidth="1000" prefHeight="600">
+    <top>
+        <VBox>
+            <Label id="titleLabel" text="Dodaj użytkownika" styleClass="label"/>
+            <Button id="backButton" text="Powrót" onAction="#handleBackClickAction" styleClass="button" />
+        </VBox>
+    </top>
+    <center>
+            <VBox id="centerVBox">
+                <VBox id="innerVBox">
+                    <Label text="Imię" styleClass="label"/>
+                    <TextField fx:id="firstNameField" promptText="Wprowadź imię" styleClass="text-field"/>
+                    <Pane prefHeight="15"/>
+                    <Label text="Nazwisko" styleClass="label"/>
+                    <TextField fx:id="lastNameField" promptText="Wprowadź nazwisko" styleClass="text-field"/>
+                    <Pane prefHeight="15"/>
+                    <Label text="E-mail" styleClass="label"/>
+                    <TextField fx:id="mailField" promptText="Wprowadź e-mail" styleClass="text-field"/>
+                    <Pane prefHeight="15"/>
+                    <Label text="Hasło" styleClass="label"/>
+                    <TextField fx:id="passwordField" promptText="Wprowadź hasło" styleClass="text-field"/>
+                    <Label fx:id="resultLabel" styleClass="label"/>
+                    <Button text="Dodaj" onAction="#handleAddUserAction" styleClass="button"/>
+                </VBox>
+            </VBox>
+    </center>
+    <stylesheets>
+        <URL value="@../styles/AddUserStyles.css" />
+    </stylesheets>
+</BorderPane>

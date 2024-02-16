@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.40"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pl.edu.agh.controller.SingleBookController"
+            prefWidth="1000" prefHeight="600">
+    <top>
+        <VBox>
+            <Button id="backButton" text="Powrót" onAction="#handleBackClickAction" styleClass="button" />
+        </VBox>
+    </top>
+    <center>
+        <VBox id="centerVBox">
+            <VBox id="innerVBox">
+                <ImageView id="image" fx:id="imageView" fitHeight="272.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true" />
+                <HBox>
+                    <TextField text="Autor: " id="name" editable="false" mouseTransparent="true" focusTraversable="false" />
+                    <TextField fx:id="authorTextField" id="content" editable="false" mouseTransparent="true" focusTraversable="false" />
+                </HBox>
+                <HBox>
+                    <TextField text="Tytuł: " id="name" editable="false" mouseTransparent="true" focusTraversable="false" />
+                    <TextField fx:id="titleTextField" id="content" editable="false" mouseTransparent="true" focusTraversable="false" />
+                </HBox>
+                <HBox>
+                    <TextField text="Gatunek: " id="name" editable="false" mouseTransparent="true" focusTraversable="false" />
+                    <TextField fx:id="categoryTextField" id="content" editable="false" mouseTransparent="true" focusTraversable="false" />
+                </HBox>
+                <TextField text="Liczba dostępnych książek: " id="coverType"  editable="false" mouseTransparent="true" focusTraversable="false"/>
+                <HBox>
+                    <TextField text="w miękkiej oprawce: " id="coverTypeName" editable="false" mouseTransparent="true" focusTraversable="false"/>
+                    <TextField fx:id="availableSoftTextField" id="coverTypeContent" editable="false" mouseTransparent="true" focusTraversable="false" />
+                    <Button id="loanButton" fx:id="loanButtonSoft" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308"
+                            mnemonicParsing="false" onAction="#hadleLoanSoftAction" text="Wypożycz">
+                    </Button>
+                </HBox>
+                <HBox>
+                    <TextField text="w twardej oprawce: " id="coverTypeName" editable="false" mouseTransparent="true" focusTraversable="false" />
+                    <TextField fx:id="availableHardTextField" id="coverTypeContent" editable="false" mouseTransparent="true" focusTraversable="false" />
+                    <Button id="loanButton" fx:id="loanButtonHard" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308"
+                            mnemonicParsing="false" onAction="#hadleLoanHardAction" text="Wypożycz">
+                    </Button>
+                </HBox>
+            </VBox>
+            <Button id="ratingButton" text="Oceń książkę" onAction="#handleRateAction" styleClass="button" />
+            <TableView id="ratings" fx:id="ratingTable" BorderPane.alignment="CENTER">
+                <columns>
+                    <TableColumn fx:id="RateColumn" text="Ocena"/>
+                    <TableColumn fx:id="CommentColumn" text="Komentarz"/>
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                </columnResizePolicy>
+            </TableView>
+        </VBox>
+    </center>
+    <stylesheets>
+        <URL value="@../styles/SingleBookStyles.css" />
+    </stylesheets>
+</BorderPane>

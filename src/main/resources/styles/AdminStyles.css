@@ -1,0 +1,32 @@
+
+#centerVBox {
+    -fx-alignment: CENTER;
+    -fx-max-height: 500;
+    -fx-max-width: 650;
+    -fx-background-color: #38b8f1;
+    -fx-background-radius: 10;
+    -fx-padding: 10px 0;
+}
+
+#titleLabel {
+    -fx-alignment: TOP-CENTER;
+    -fx-font-size: 30px;
+    -fx-padding: 5px;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-pref-width: 1000;
+}
+
+.button {
+    -fx-pref-width: 100;
+    -fx-pref-height: 40;
+    -fx-background-color: #fdfdfd;
+    -fx-text-fill: black;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+#backButton {
+     -fx-border-width: 1px;
+     -fx-border-color: #38b8f1;
+     -fx-border-radius: 5px;
+ }

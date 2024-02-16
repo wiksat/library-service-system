@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pl.edu.agh.controller.UserStatsController"
+            prefWidth="1000" prefHeight="600">
+    <top>
+        <VBox>
+            <Label id="titleLabel" text="Statystyki wypożyczeń" styleClass="label"/>
+            <Button id="backButton" text="Powrót" onAction="#handleBackClickAction" styleClass="button"/>
+        </VBox>
+    </top>
+    <center>
+        <VBox id="centerVBox">
+            <VBox id="innerVBox">
+                <VBox>
+                    <Label id="title" text="Aktualnie wypożyczone przez użytkownika" styleClass="label"/>
+                </VBox>
+                <TableView fx:id="mostCurrentTable" BorderPane.alignment="CENTER"  >
+                    <columns>
+                        <TableColumn fx:id="TitleColumnCurrent" text="Tytuł książki"/>
+                        <TableColumn fx:id="AmountColumnCurrent" text="Ilość wypożyczeń"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+                <VBox>
+                    <Label id="title" text="Zakończone wypożyczenie przez użytkownika" styleClass="label"/>
+                </VBox>
+                <TableView fx:id="mostHistoricalTable" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="TitleColumnHistorical" text="Tytuł książki"/>
+                        <TableColumn fx:id="AmountColumnHistorical" text="Ilość wypożyczeń"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+                <Label text="Ilość aktualnie wypożyczeń przez użytkownika:">
+                </Label>
+                <TextField fx:id="amountCurrentLoansField" GridPane.columnIndex="1" disable="true">
+                </TextField>
+                <Label text="Ilość zakończonych wypożyczeń przez użytkownika:">
+                </Label>
+                <TextField fx:id="amountHistoricalLoansField" GridPane.columnIndex="1" disable="true">
+                </TextField>
+            </VBox>
+        </VBox>
+    </center>
+
+    <stylesheets>
+        <URL value="@../styles/StatsStyles.css"/>
+    </stylesheets>
+</BorderPane>

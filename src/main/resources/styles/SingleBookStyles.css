@@ -1,0 +1,113 @@
+#centerVBox {
+    -fx-alignment: CENTER;
+    -fx-max-height: 900;
+    -fx-max-width: 650;
+    -fx-background-color: #38b8f1;
+    -fx-background-radius: 10;
+    -fx-padding: 10px 0;
+}
+
+#innerVBox {
+    -fx-max-width: 650;
+    -fx-alignment: CENTER;
+    -fx-background-color: #fff;
+    -fx-padding: 10px 15px;
+}
+
+#image {
+    -fx-border-insets: 10px 0;
+    -fx-background-insets: 5px;
+}
+
+#name {
+    -fx-font-size: 16px;
+    -fx-pref-width: 90px;
+    -fx-pref-height: 50px;
+
+    -fx-border-insets: 10px 0;
+    -fx-background-insets: 5px;
+}
+
+#content {
+    -fx-alignment: CENTER;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 540px;
+    -fx-pref-height: 50px;
+
+    -fx-border-insets: 10px 0;
+    -fx-background-insets: 5px;
+}
+
+#titleLabel {
+    -fx-alignment: TOP-CENTER;
+    -fx-font-size: 30px;
+    -fx-padding: 5px;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-pref-width: 1000;
+}
+
+#backButton {
+    -fx-pref-width: 100;
+    -fx-pref-height: 40;
+    -fx-background-color: #fdfdfd;
+    -fx-text-fill: black;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+
+    -fx-border-width: 1px;
+    -fx-border-color: #38b8f1;
+    -fx-border-radius: 5px;
+}
+
+#loanButton {
+    -fx-pref-width: 120;
+    -fx-background-color: #b8f1;
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+    -fx-border-width: 1px;
+    -fx-border-color: #000;
+    -fx-border-radius: 5px;
+}
+#ratingButton {
+    -fx-pref-height: 150px;
+    -fx-pref-width: 650px;
+    -fx-background-color: #f3f7ce;
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+
+    -fx-border-width: 1px;
+    -fx-border-color: #000;
+}
+#coverType {
+    -fx-alignment: CENTER;
+    -fx-font-size: 18px;
+    -fx-pref-width: 630px;
+    -fx-pref-height: 50px;
+
+    -fx-border-insets: 10px 0;
+    -fx-background-insets: 5px;
+}
+
+#coverTypeName {
+    -fx-font-size: 16px;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 50px;
+
+    -fx-border-insets: 10px 0;
+    -fx-background-insets: 5px;
+}
+
+#coverTypeContent {
+    -fx-alignment: CENTER;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 300px;
+    -fx-pref-height: 50px;
+
+    -fx-border-insets: 10px 0;
+    -fx-background-insets: 5px;
+}

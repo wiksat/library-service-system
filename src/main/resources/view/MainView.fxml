@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.40"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pl.edu.agh.controller.MainController"
+            prefWidth="1000" prefHeight="600">
+    <top>
+        <Label id="titleLabel" text="Strona główna" styleClass="label"/>
+    </top>
+    <center>
+        <VBox id="centerVBox">
+            <Button fx:id="CatalogButton" text="Katalog" onAction="#handleCatalogClickAction" styleClass="button"/>
+            <Button fx:id="BorrowedBooksButton" text="Wypożczone książki" onAction="#handleShowBorrowedClickAction" styleClass="button"/>
+            <Button fx:id="AddBookButton" text="Dodaj książkę" onAction="#handleAddBookClickAction" styleClass="button"/>
+            <Button fx:id="AdminViewButton" text="Widok administratora" onAction="#handleAdminClickAction" styleClass="button"/>
+            <Button fx:id="SendEmailButton" text="Wyślij email" onAction="#handleSendEmailClickAction" styleClass="button"/>
+            <Button fx:id="ShowStatsLibrarianButton" text="Pokaż statystyki" onAction="#handleShowStatsLibrarianClickAction" styleClass="button"/>
+            <Button fx:id="ShowStatsUserButton" text="Pokaż statystyki" onAction="#handleShowStatsUserClickAction" styleClass="button"/>
+            <Button fx:id="LogoutButton" text="Wyloguj się" onAction="#handleLogoutClickAction" styleClass="button"/>
+        </VBox>
+    </center>
+    <stylesheets>
+        <URL value="@../styles/MainStyles.css" />
+    </stylesheets>
+</BorderPane>

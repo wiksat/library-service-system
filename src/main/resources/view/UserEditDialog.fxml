@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<BorderPane prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pl.edu.agh.controller.UserDialogController">
+    <center>
+        <GridPane hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0"/>
+                <RowConstraints minHeight="10.0"/>
+                <RowConstraints minHeight="10.0"/>
+                <RowConstraints minHeight="10.0"/>
+            </rowConstraints>
+            <children>
+                <Label text="ID użytkonika">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label text="Typ konta" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label text="Imię" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label text="Nazwisko" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label text="Email" GridPane.rowIndex="4">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </Label>
+                <VBox fx:id="adminVBoxLabels" visible="false" GridPane.rowIndex="5">
+                    <Label text="Numer pokoju" GridPane.rowIndex="3">
+                        <GridPane.margin>
+                            <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+                        </GridPane.margin>
+                    </Label>
+                    <Label text="Numer telefonu" GridPane.rowIndex="4">
+                        <GridPane.margin>
+                            <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+                        </GridPane.margin>
+                    </Label>
+                </VBox>
+
+                <TextField fx:id="uidField" GridPane.columnIndex="1" disable="true">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <ComboBox fx:id="typeAccountField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="MEMBER"/>
+                            <String fx:value="ADMIN"/>
+                            <String fx:value="LIBRARIAN"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <VBox fx:id="memberVBox" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                <CheckBox fx:id="bannedCheckBox" text="Is banned"/>
+                <CheckBox fx:id="newsletterCheckBox" text="Send newsletter"/>
+                </VBox>
+                <VBox fx:id="adminVBox" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                <TextField fx:id="roomField" text="Numer pokoju">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="phoneNumberField" text="Numer telefonu">
+                    <GridPane.margin>
+                        <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+                    </GridPane.margin>
+                </TextField>
+                </VBox>
+            </children>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox alignment="BOTTOM_RIGHT" spacing="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleCancelAction" prefWidth="60.0" text="Cancel">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#handleOkAction" prefWidth="60.0" text="Ok">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="0.0" left="5.0" right="5.0" top="5.0"/>
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+    <opaqueInsets>
+        <Insets/>
+    </opaqueInsets>
+</BorderPane>
